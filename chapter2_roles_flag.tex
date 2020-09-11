@@ -1,0 +1,98 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage{scratch}
+
+\begin{document}
+
+\begin{frame}
+
+\end{frame}
+
+\begin{frame}
+
+  \begin{scratch}
+  \blockmove{set variable \ovalvariable{flag} as \txtbox{False}}
+  \blockmove{set variable \ovalvariable{looking for} as \txtbox{42}}
+  \end{scratch}
+
+\end{frame}
+
+
+\begin{frame}
+
+  \begin{scratch}
+  \blockmove{set variable \ovalvariable{flag} as \txtbox{False}}
+  \blockmove{set variable \ovalvariable{looking for} as \txtbox{42}}
+  \blockspace
+  \blockifelse{ if \booloperator{ \ovalvariable{flag} } }
+  {
+    \blocklook{print The file has value \ovalvariable{looking for} }
+  }{
+    \blocklook{print The file does not have value \ovalvariable{looking for} }
+  }
+  \end{scratch}
+
+\end{frame}
+
+\begin{frame}
+
+  \begin{scratch}
+      \blockif{ if \booloperator{ \ovalvariable{number} $==$ \ovalvariable{looking for} } }
+      {
+        \blockspace
+      }
+  \end{scratch}
+
+\end{frame}
+
+\begin{frame}
+
+  \begin{scratch}
+    \blockif{ if \booloperator{ \ovalvariable{number} $==$ \ovalvariable{looking for} } }
+      {
+        \blockmove{set variable \ovalvariable{flag} as \txtbox{True} }
+      }
+  \end{scratch}
+
+\end{frame}
+
+\begin{frame}
+
+  \begin{scratch}
+  \blockrepeat{for each \ovalvariable{line} in file \txtbox{example.txt}}
+  {
+      \blockmove{set variable \ovalvariable{number} as numerical value of \ovalvariable{line}}
+      \blockif{ if \booloperator{ \ovalvariable{number} $==$ \ovalvariable{looking for} } }
+      {
+        \blockmove{set variable \ovalvariable{flag} as \txtbox{True} }
+      }
+  }
+  \end{scratch}
+
+\end{frame}
+
+\begin{frame}
+
+  \begin{scratch}
+  \blockmove{set variable \ovalvariable{flag} as \txtbox{False}}
+  \blockmove{set variable \ovalvariable{looking for} as \txtbox{42}}
+  \blockrepeat{for each \ovalvariable{line} in file \txtbox{example.txt}}
+  {
+      \blockmove{set variable \ovalvariable{number} as numerical value of \ovalvariable{line}}
+      \blockif{ if \booloperator{ \ovalvariable{number} $==$ \ovalvariable{looking for} } }
+      {
+        \blockmove{set variable \ovalvariable{flag} as \txtbox{True} }
+      }
+  }
+  \blockifelse{ if \booloperator{ \ovalvariable{flag} } }
+  {
+    \blocklook{print The file has value \ovalvariable{looking for} }
+  }{
+    \blocklook{print The file does not have value \ovalvariable{looking for} }
+  }
+  \end{scratch}
+
+\end{frame}
+
+\end{document}
