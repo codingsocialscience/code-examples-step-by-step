@@ -1,0 +1,79 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage{scratch}
+
+\begin{document}
+
+\begin{frame}
+
+\end{frame}
+
+\begin{frame}
+
+  \begin{scratch}
+  \blockmove{set variable \ovalvariable{most wanted holder} as \txtbox{0}}
+  \end{scratch}
+
+\end{frame}
+
+\begin{frame}
+
+  \begin{scratch}
+  \blockmove{set variable \ovalvariable{most wanted holder} as \txtbox{0}}
+  \blockspace
+  \blockif{ if \booloperator{ \ovalvariable{number} $>$ \ovalvariable{most wanted holder} } }
+  {
+    \blockspace
+  }
+  \end{scratch}
+
+\end{frame}
+
+\begin{frame}
+
+  \begin{scratch}
+  \blockmove{set variable \ovalvariable{most wanted holder} as \txtbox{0}}
+  \blockspace
+  \blockif{ if \booloperator{ \ovalvariable{number} $>$ \ovalvariable{most wanted holder} } }
+  {
+    \blockmove{set variable \ovalvariable{most wanted holder} as \ovalvariable{number} }
+  }
+  \end{scratch}
+
+\end{frame}
+
+\begin{frame}
+
+  \begin{scratch}
+  \blockmove{set variable \ovalvariable{most wanted holder} as \txtbox{0}}
+  \blockrepeat{for each \ovalvariable{line} in file \txtbox{example.txt}}
+  {
+      \blockmove{set variable \ovalvariable{number} as numerical value of \ovalvariable{line}}
+      \blockif{ if \booloperator{ \ovalvariable{number} $>$ \ovalvariable{most wanted holder} } }
+      {
+        \blockmove{set variable \ovalvariable{most wanted holder} as \ovalvariable{number} }
+      }
+  }
+  \end{scratch}
+
+\end{frame}
+
+\begin{frame}
+
+  \begin{scratch}
+  \blockmove{set variable \ovalvariable{most wanted holder} as \txtbox{0}}
+  \blockrepeat{for each \ovalvariable{line} in file \txtbox{example.txt}}
+  {
+      \blockmove{set variable \ovalvariable{number} as numerical value of \ovalvariable{line}}
+      \blockif{ if \booloperator{ \ovalvariable{number} $>$ \ovalvariable{most wanted holder} } }
+      {
+        \blockmove{set variable \ovalvariable{most wanted holder} as \ovalvariable{number} }
+      }
+  }
+  \blocklook{print The highest number is \ovalvariable{most wanted holder} }
+  \end{scratch}
+
+\end{frame}
+
+\end{document}
