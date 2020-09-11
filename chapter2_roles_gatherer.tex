@@ -1,0 +1,69 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage{scratch}
+
+\begin{document}
+
+\begin{frame}
+
+\end{frame}
+
+\begin{frame}
+
+  \begin{scratch}
+  \blockmove{set variable \ovalvariable{gatherer} as \txtbox{0}}
+  \end{scratch}
+
+\end{frame}
+
+\begin{frame}
+
+  \begin{scratch}
+  \blockmove{set variable \ovalvariable{gatherer} as \txtbox{0}}
+  \blockspace
+  \blockmove{set variable \ovalvariable{gatherer} as \ovaloperator{ \ovalvariable{gatherer} + \ovalvariable{number} } }
+  \end{scratch}
+
+\end{frame}
+
+\begin{frame}
+
+  \begin{scratch}
+  \blockmove{set variable \ovalvariable{gatherer} as \txtbox{0}}
+  \blockrepeat{for each \ovalvariable{line} in file \txtbox{example.txt}}
+  {
+    \blockmove{set variable \ovalvariable{gatherer} as \ovaloperator{ \ovalvariable{gatherer} + \ovalvariable{number} } }
+  }
+  \end{scratch}
+
+\end{frame}
+
+\begin{frame}
+
+  \begin{scratch}
+  \blockmove{set variable \ovalvariable{gatherer} as \txtbox{0}}
+  \blockrepeat{for each \ovalvariable{line} in file \txtbox{example.txt}}
+  {
+    \blockmove{set variable \ovalvariable{number} as numerical value of \ovalvariable{line}}
+    \blockmove{set variable \ovalvariable{gatherer} as \ovaloperator{ \ovalvariable{gatherer} + \ovalvariable{number} } }
+  }
+  \end{scratch}
+
+\end{frame}
+
+\begin{frame}
+
+  \begin{scratch}
+  \blockmove{set variable \ovalvariable{gatherer} as \txtbox{0}}
+  \blockrepeat{for each \ovalvariable{line} in file \txtbox{example.txt}}
+  {
+      \blockmove{set variable \ovalvariable{number} as numerical value of \ovalvariable{line}}
+      \blockmove{set variable \ovalvariable{gatherer} as \ovaloperator{ \ovalvariable{gatherer} + \ovalvariable{number} } }
+  }
+  \blocklook{print The sum of numbers is \ovalvariable{gatherer} }
+  \end{scratch}
+
+\end{frame}
+
+\end{document}
